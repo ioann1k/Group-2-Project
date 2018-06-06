@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: #515A5A;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: #96969A;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.pr-0 {
+    padding-right: 0;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.heading {
+    border-bottom: 3px solid #96969A;
+    display: inline-block;
+    padding-bottom: 3px;
+    margin-bottom: 50px;
+}
+
+header {
+    padding-top: 100px;
+}
+
+#navigation-bar {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#navigation-bar li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+}
+
+#navigation-bar li a {
+    color: #D4D4D7;
+    border-bottom: 2px solid transparent;
+    transition: all .15s ease-in-out;
+    font-size: 14px;
+}
+
+#navigation-bar li a:hover {
+    color: #96969A;
+}
+
+#navigation-bar li.active a {
+    color: #96969A;
+    font-weight: bold;
+    border-color: #96969A;
+}
+
+#spacecraft-animation {
+    text-align: center;
+}
+
+#spacecraft-animation svg {
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    #spacecraft-animation svg {
+        max-width: 435px;
+    }
+}
+
+#spacecraft-animation #spacecraft,
+.planet {
+    animation-name: float;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(15%);
+    }
+
+    50% {
+        transform: translateY(-15%);
+    }
+
+    100% {
+        transform: translateY(15%);
+    }
+}
+
+#main-content {
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.planet {
+    position: absolute;
+    top: 0;
+    animation-duration: 5s;
+}
+
+.offer {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #d4d4d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.offer.image-right .description {
+    margin-right: 50px;
+}
+
+.offer.image-left .description {
+    margin-left: 50px;
+}
+
+.offer .image {
+    max-width: 150px;
+    max-height: 130px;
+    display: block;
+}
+
+.offer .description {
+    text-align: left;
+    max-width: 240px;
+}
