@@ -111,31 +111,24 @@ header {
     width: 100%;
 }
 
-@media (min-width: 1200px) {
-    #spacecraft-animation svg {
-        max-width: 435px;
-    }
-}
-
-#spacecraft-animation #spacecraft,
-.planet {
+#spacecraft-animation #spacecraft {
     animation-name: float;
-    animation-duration: .7s;
+    animation-duration: 1.2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
 @keyframes float {
     0% {
-        transform: translateY(15%);
+        transform: translateY(5%);
     }
 
     50% {
-        transform: translateY(-15%);
+        transform: translateY(-5%);
     }
 
     100% {
-        transform: translateY(15%);
+        transform: translateY(5%);
     }
 }
 
@@ -148,7 +141,10 @@ header {
 .planet {
     position: absolute;
     top: 0;
-    animation-duration: 5s;
+    opacity: .8;
+    zoom: 1.7;
+    transition: all .3s ease-out;
+    transform: translateY(0);
 }
 
 .offer {
@@ -170,12 +166,50 @@ header {
 }
 
 .offer .image {
-    max-width: 150px;
-    max-height: 130px;
+    min-width: 18%;
     display: block;
 }
 
 .offer .description {
     text-align: left;
-    max-width: 240px;
+    min-width: 240px;
+}
+
+@media (min-width: 1200px) {
+    #spacecraft-animation svg {
+        width: 65%;
+    }
+
+    body {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .heading {
+        border-width: 4px;
+        margin-bottom: 100px;
+    }
+
+    #navigation-bar {
+        margin-bottom: 30px;
+    }
+
+    #navigation-bar li {
+        margin: 0 70px;
+    }
+
+    #navigation-bar li a {
+        font-size: 20px;
+    }
+
+    .offer.image-left .description {
+        margin-left: 100px;
+    }
+
+    .offer.image-right .description {
+        margin-right: 100px;
+    }
 }
